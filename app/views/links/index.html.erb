@@ -1,0 +1,14 @@
+<h1 class="text-2xl font-bold mb-4">Shorty - URL Shortener</h1>
+
+<%= form_with model: Link.new do |form| %>
+    <div class="grid gap-1">
+        <%= form.label :url, class: "ml-3 font-medium text-sm" %>
+
+        <div class="flex gap-1 items-center">
+            <%= form.text_field :url, placeholder: "https://www.example.com", required: true, class: "border border-gray-100 rounded-l-full py-1 px-3 text-sm flex-grow" %>
+            <%= form.submit "Shorten link", class: "text-sm px-3 py-1 bg-indigo-500 text-white rounded-r-full font-medium cursor-pointer " %>
+        </div> 
+    </div>
+<% end %>
+
+<%= render @links %>
