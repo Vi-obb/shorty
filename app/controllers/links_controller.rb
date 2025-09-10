@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  before_action :set_link, only: [:show]
+  before_action :set_link, only: [ :show ]
   def index
     @links = Link.recent_first
   end
