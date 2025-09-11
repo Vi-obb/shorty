@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :links
-  resources :views, path: :v, only: [ :show ]
+  resources :views, path: :s, only: [ :show ]
   root "links#index"
 end

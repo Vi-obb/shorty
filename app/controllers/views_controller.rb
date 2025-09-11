@@ -1,6 +1,10 @@
 class ViewsController < ApplicationController
   before_action :set_link
 
+  rescue_from ActiveRecord::RecordNotFound do
+    redirect_to root_path, alert: "This link doesn't exist"
+  end
+
   def show
     @link.views.create(
       ip: request.ip,
