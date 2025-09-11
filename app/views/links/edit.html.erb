@@ -1,0 +1,8 @@
+<h1 class="text-2xl font-bold mb-4">Edit Link</h1>
+
+<%= render partial: "form", locals: { link: @link } %>
+
+<div class="flex items-center gap-1 mt-4">
+    <%= link_to "Cancel", @link, class: "bg-gray-300 text-gray-800 text-sm font-medium px-3 py-1 rounded-l-full"  %>
+    <%= button_to "Delete", @link, method: :delete, data: { turbo_confirm: "Are you sure? This action is irreversible" }, class: "bg-red-500 text-white text-sm font-medium px-3 py-1 rounded-r-full cursor-pointer" %>
+</div>

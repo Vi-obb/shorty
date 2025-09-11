@@ -24,6 +24,9 @@
 
   <body>
     <main class="mx-auto mt-10 max-w-md">
+       <%= tag.div alert, class: "bg-red-100 font-medium text-red-800 text-sm p-3 rounded-lg mb-4" if alert %>
+       <%= tag.div notice, class: "bg-blue-100 font-medium text-blue-800 text-sm p-3 rounded-lg mb-4" if notice %>
+
       <%= yield %>
     </main>
   </body>
