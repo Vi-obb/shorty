@@ -1,6 +1,7 @@
 <%= link_to "⟵ Back to links", root_path, class: "text-xs px-2 py-1 bg-gray-300 rounded-full font-medium text-gray-800" %>
 
 <div class="mt-2 mb-4">
+    <%= image_tag @link.image, class: "w-full max-w-md h-48 object-cover rounded-lg border border-gray-200 mb-2" if @link.image.present? %>
     <h1 class="text-xl font-bold"><%= @link.title || @link.url %></h1>
     <p class="text-gray-600 text-sm"><%= @link.description %></p>
 </div>
